@@ -53,6 +53,19 @@ namespace Assignment03OOP
             //refBase.MyFun02();            
             #endregion
 
+            #region Not Binding
+            //Ref from Child => Object from Parent
+
+            //TypeB ChildRef = new TypeA(); //Invalid
+            //TypeB ChildRef = (TypeB) new TypeA(1); //Valid 
+
+            //TypeA typeA = new TypeA(1);
+            //TypeB typeB = (TypeB) typeA; //Invalid
+
+            //TypeA typeA = new TypeB(1,3); 
+            //TypeB typeB = (TypeB)typeA; //Valid
+            #endregion
+
 
         }
     }
