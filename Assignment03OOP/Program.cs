@@ -1,4 +1,5 @@
-﻿using Assignment03OOP.Polymorphism_Overriding;
+﻿using Assignment03OOP.Binding;
+using Assignment03OOP.Polymorphism_Overriding;
 
 namespace Assignment03OOP
 {
@@ -20,6 +21,24 @@ namespace Assignment03OOP
         {
             return X + Y;
         }
+
+        public static void ProcessEmployee(Employee emplyee)
+        {
+            if (emplyee != null)
+            {
+                emplyee.GetEmployeeType();
+                emplyee.GetEmployeeData();
+            }
+        }
+        ///public static void ProcessEmployee(ParttimeEmployee emplyee)
+        ///{
+        ///    if (emplyee != null)
+        ///    {
+        ///        emplyee.GetEmployeeType();
+        ///        emplyee.GetEmployeeData();
+        ///    }
+        ///}
+
         static void Main(string[] args)
         {
             #region Polymorphism [Overloading]
@@ -66,6 +85,16 @@ namespace Assignment03OOP
             //TypeB typeB = (TypeB)typeA; //Valid
             #endregion
 
+            #region Ex 01
+            //FulltimeEmployee fulltimeEmployee = new FulltimeEmployee(10, "Mohamed", 21, 3000);
+            //ProcessEmployee(fulltimeEmployee);
+            //ParttimeEmployee parttimeEmployee = new ParttimeEmployee()
+            //{
+            //    Id = 30,
+            //    Name = "MOHAMED"
+            //};
+            //ProcessEmployee(parttimeEmployee);
+            #endregion
 
         }
     }
